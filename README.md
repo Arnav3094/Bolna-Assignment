@@ -4,9 +4,8 @@ A production-ready Python application that **automatically tracks OpenAI status 
 
 ## Key Features
 
-✅ **Event-Based Monitoring** - Uses RSS feeds (provider-driven updates, not polling)  
-✅ **Efficient Scalability** - Designed to scale to 100+ status pages  
-✅ **Real-Time Alerts** - Immediate notifications of incidents, updates, and resolutions  
+✅ **Event-Based Monitoring** - Uses RSS feeds (provider-driven updates)  
+✅ **Real-Time Alerts** - Immediate notifications of incidents, updates, and resolutions
 ✅ **Persistent State** - Redis-backed caching to avoid duplicate alerts  
 ✅ **Professional Logging** - Clean, structured logs with timestamp  
 ✅ **Production-Ready** - Modular, testable, async architecture  
@@ -132,18 +131,6 @@ OpenAI Status Page (incident.io)
 ```
 
 ## Why RSS Over API Polling?
-
-### Network Efficiency
-
-| Approach | 1 Provider | 100 Providers |
-| -------- | ---------- | ------------- |
-| **API Polling (5sec)** | 720 req/min | 72,000 req/min (wasteful!) |
-| **RSS Polling (30sec)** | 200 req/min | 20,000 req/min (efficient) |
-
-### Event-Driven Nature
-
-**API Polling**: You continuously ask "Is anything new?" (inefficient)  
-**RSS Feeds**: Provider tells you when something changes (efficient)
 
 ### Scalability
 
