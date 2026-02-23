@@ -8,6 +8,7 @@ aiohttp = "==3.9.1"
 redis = "==5.0.1"
 python-dotenv = "==1.0.0"
 loguru = "==0.7.2"
+feedparser = "*"
 
 [dev-packages]
 pytest = "*"
