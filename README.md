@@ -13,6 +13,7 @@ Real-time OpenAI service status monitoring. Polls the incident.io API every 5 se
 ## Quick Start
 
 ### Prerequisites
+
 - Python 3.12+
 - Redis running locally (`redis-server`)
 - Pipenv (`pip install pipenv`)
@@ -42,7 +43,7 @@ LOG_LEVEL=INFO
 
 ## Example Output
 
-```
+```txt
 [2026-02-23 20:36:03] INFO     ✓ Connected to Redis
 [2026-02-23 20:36:03] INFO     ✓ HTTP session initialized
 [2026-02-23 20:36:03] INFO     🚀 Starting poller (interval=5s)
@@ -65,4 +66,3 @@ LOG_LEVEL=INFO
 
 1. **Phase 1 (MVP):** 5sec polling, single instance, monitor for rate limits
 2. **Phase 2 (Scale):** Add multi-instance setup with jitter + backoff
-3. **Phase 3 (Optimize):** Negotiate webhooks or API key tier with incident.io
